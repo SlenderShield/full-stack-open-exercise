@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3001/persons";
+const baseURL = "http://localhost:3001/api/persons";
 
 const getAll = async () => {
   const response = await axios.get(baseURL).then((res) => res.data);
@@ -9,7 +9,7 @@ const getAll = async () => {
 
 const postPerson = async (person) => {
   const response = await axios.post(baseURL, person).then((res) => res.data);
-  console.log(response)
+  console.log(response);
   return response;
 };
 
@@ -17,7 +17,6 @@ const deletePerson = async (id) => {
   const response = await axios
     .delete(`${baseURL}/${id}`)
     .then((res) => res.data);
-
   return response;
 };
 

@@ -156,9 +156,7 @@ function App() {
     window.confirm(`Delete ${name}?`)
       ? phonebook
           .deletePerson(id)
-          .then((res) =>
-            setPersons(persons.filter((person) => person.id !== res.id))
-          )
+          .then(() => setPersons(persons.filter((person) => person.id !== id)))
       : "";
     setMessage(`${name} deleted from phonebook`);
     setStyle("delete");

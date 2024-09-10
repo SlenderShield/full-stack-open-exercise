@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --test"
   },
   "author": "Murali",
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "blogpost": "file:"
+    "blogpost": "file:",
+    "nodemon": "^3.1.4"
   }
 }
